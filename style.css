@@ -1,0 +1,59 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0d041a;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: none;
+}
+
+#art-canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#instruction-overlay {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    pointer-events: auto;
+    color: rgba(255, 221, 119, 0.7);
+    font-size: 1.2vw;
+    font-weight: 300;
+    text-shadow: 0 0 10px rgba(255, 221, 119, 0.4);
+    text-align: center;
+    opacity: 1;
+    transition: opacity 1.5s ease-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#text-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    pointer-events: none;
+}
+
+#final-message {
+    color: rgba(255, 221, 119, 0);
+    font-size: 3.5vw;
+    font-weight: 300;
+    text-shadow: 0 0 15px rgba(255, 221, 119, 0.5);
+    text-align: center;
+    transition: opacity 2s ease-in-out;
+    opacity: 0;
+}
